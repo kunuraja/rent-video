@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "bb592ec3-dd5c-43a3-95a3-f9fa1936e6d4",
+		"name": "rent-video",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11595394",
+		"_collection_link": "https://galactic-firefly-715314.postman.co/workspace/crio-coderhack~956b42b3-e470-4337-a0d0-7cb09c311f36/collection/11595394-bb592ec3-dd5c-43a3-95a3-f9fa1936e6d4?action=share&source=collection_link&creator=11595394"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Raj\",\r\n    \"lastName\": \"Mishra\",\r\n    \"email\": \"r.m@gmail.com\",\r\n    \"password\": \"rm1234\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "createVideo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "rm.admin@gmail.com",
+						"password": "rm1234"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"vid4\",\r\n    \"director\": \"director4\",\r\n    \"genre\": \"genre4\",\r\n    \"available\": \"AVAILABLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/videos"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteVideo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveVideos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updateVideo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "rm.admin@gmail.com",
+						"password": "rm1234"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"vid1\",\r\n    \"director\": \"director11\",\r\n    \"genre\": \"genre1\",\r\n    \"available\": \"UNAVAILABLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/videos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"r.m@gmail.com\",\r\n    \"password\" : \"rm1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/login"
+			},
+			"response": []
+		}
+	]
+}
