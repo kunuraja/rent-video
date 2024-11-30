@@ -27,6 +27,5 @@ DELETE /videos/{videoId} - For deleting a video
 
 GET /videos - For getting the list of videos (Both available and unavailable)
 
-The postman collection is added to this project repository.
+The Postman collection has been added to this project repository.
 
-PUT /students/{studentId}/subjects/{subjectId}/exams/{examId} - For registerin a registered student into the exam for the corresponding subject
